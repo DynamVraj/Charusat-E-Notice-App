@@ -16,10 +16,10 @@ class _LoginState extends State<Login> {
 
   @override
   Widget build(BuildContext context) {
-
     final emailField = TextField(
       obscureText: false,
       style: style,
+
       decoration: InputDecoration(
           contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
           hintText: "Email",
@@ -54,49 +54,52 @@ class _LoginState extends State<Login> {
 
     return Scaffold(
       body: Center(
-        child: Container(
-          color: Colors.white,
-          child: Padding(
-            padding: const EdgeInsets.all(36.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                SizedBox(
-                  height: 155.0,
-                  child: Image.asset(
-                    "images/logo.png",
-                    fit: BoxFit.contain,
+        child: SingleChildScrollView(
+          primary: false,
+          child: Container(
+            color: Colors.white,
+            child: Padding(
+              padding: const EdgeInsets.all(36.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  SizedBox(height : 120.0),
+                  SizedBox(
+                    height: 155.0,
+                    child: Image.asset(
+                      "images/logo.png",
+                      fit: BoxFit.contain,
+                    ),
                   ),
-                ),
-                SizedBox(height: 0.0),
-                RichText(
-                    text: TextSpan(
-                        text: 'Welcome to ', style: TextStyle(
-                        fontSize: 20.0,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black),
-                        children: [
-                          TextSpan(
-                            text: 'CHARUSAT', style: TextStyle(
-                              fontSize: 21.0,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.deepOrange),
-                          )
-                        ]
-                    )
-                ),
-                SizedBox(height: 5.0),
-                Text('An e-notice App of Charusat University',style: TextStyle(color:Colors.black),
-                ),
-                SizedBox(height: 45.0),
-                emailField,
-                SizedBox(height: 25.0),
-                passwordField,
-                SizedBox(height: 35.0),
-                loginButon,
-
-              ],
+                  SizedBox(height: 10.0),
+                  RichText(
+                      text: TextSpan(
+                          text: 'Welcome to ', style: TextStyle(
+                          fontSize: 20.0,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black),
+                          children: [
+                            TextSpan(
+                              text: 'CHARUSAT', style: TextStyle(
+                                fontSize: 21.0,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.deepOrange),
+                            )
+                          ]
+                      )
+                  ),
+                  SizedBox(height: 5.0),
+                  Text('An e-notice App of Charusat University',style: TextStyle(color:Colors.black)),
+                  SizedBox(height: 45.0),
+                  emailField,
+                  SizedBox(height: 25.0),
+                  passwordField,
+                  SizedBox(height: 35.0),
+                  loginButon,
+                  SizedBox(height: 180.0),
+                ],
+              ),
             ),
           ),
         ),
@@ -104,5 +107,3 @@ class _LoginState extends State<Login> {
     );
   }
 }
-
-

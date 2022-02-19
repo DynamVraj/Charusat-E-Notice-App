@@ -22,82 +22,86 @@ class _HomeState extends State<Home>{
     );
     return Scaffold(
         body: Center(
-        child: Container(
-        color: Colors.white,
-        child: Padding(
-          padding: const EdgeInsets.all(36.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              SizedBox(height :135.0),
-              SizedBox(
-                height: 155.0,
-                child: Image.asset(
-                  "images/logo.png",
-                  fit: BoxFit.contain,
+        child: SingleChildScrollView(
+          primary: false,
+          child: Container(
+          color: Colors.white,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                SizedBox(height :155.0),
+                SizedBox(
+                  height: 155.0,
+                  child: Image.asset(
+                    "images/logo.png",
+                    fit: BoxFit.contain,
+                  ),
                 ),
-              ),
-              GridView.count(
-                  shrinkWrap: true,
-                  crossAxisCount: 2,
-                  crossAxisSpacing: 10.0,
-                  children: [
-                    Column(
-                      children : [
-                        IconButton(
-                          icon: Image.asset(
-                            'images/faculty.jpeg',
+                SizedBox(height: 25),
+                GridView.count(
+                    primary: false,
+                    padding: EdgeInsets.all(50.0),
+                    shrinkWrap: true,
+                    crossAxisCount: 2,
+                    children: [
+                      Column(
+                        children : [
+                          IconButton(
+                            icon: Image.asset(
+                              'images/faculty.jpeg',
+                            ),
+                            iconSize: 80,
+                            onPressed: () {},
                           ),
-                          iconSize: 100,
-                          onPressed: () {},
-                        ),
-                        Text('Faculty Info')
-                      ],
-                    ),
-                    Column(
-                      children : [
-                        IconButton(
-                        icon: Image.asset(
-                          'images/Gallery.png',
-                        ),
-                        iconSize: 100,
-                        onPressed: () {},
-                        ),
-                        Text('Gallery')
-                      ],
-                    ),
-                    Column(
-                      children : [
-                        IconButton(
+                          Text('Faculty Info')
+                        ],
+                      ),
+                      Column(
+                        children : [
+                          IconButton(
                           icon: Image.asset(
-                            'images/AboutUs.png',
+                            'images/Gallery.png',
                           ),
-                          iconSize: 100,
+                          iconSize: 80,
                           onPressed: () {},
-                        ),
-                        Text('About Us')
-                      ],
-                    ),
-                    Column(
-                      children : [
-                        IconButton(
-                          icon: Image.asset(
-                            'images/Contact.png',
                           ),
-                          iconSize: 100,
-                          onPressed: () {},
-                        ),
-                        Text('Contact Us')
-                      ],
-                    ),
-                  ],
-
-                ),
-              ],
-            )
+                          Text('Gallery')
+                        ],
+                      ),
+                      Column(
+                        children : [
+                          IconButton(
+                            icon: Image.asset(
+                              'images/AboutUs.png',
+                            ),
+                            iconSize: 80,
+                            onPressed: () {},
+                          ),
+                          Text('About Us')
+                        ],
+                      ),
+                      Column(
+                        children : [
+                          IconButton(
+                            icon: Image.asset(
+                              'images/Contact.png',
+                            ),
+                            iconSize: 80,
+                            onPressed: () {},
+                          ),
+                          Text('Contact Us')
+                        ],
+                      ),
+                      SizedBox(height: 0.0,)
+                    ],
+                  ),
+                SizedBox(height: 0.0),
+                ],
+              )
+            ),
           ),
         ),
-      ),
+
     );
   }
 
