@@ -28,30 +28,71 @@ class _HomeState extends State<Home>{
           padding: const EdgeInsets.all(36.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
+              SizedBox(height :135.0),
               SizedBox(
-                height: 200.0,
+                height: 155.0,
                 child: Image.asset(
                   "images/logo.png",
                   fit: BoxFit.contain,
-                  ),
                 ),
-              SizedBox(height: 0.0),
-              SizedBox(height: 25.0),
-              SizedBox(height: 5.0),
-              SizedBox(height: 45.0),
-              SizedBox(height: 15.0),
-              SizedBox(height: 35.0),
-              IconButton(
-                icon: Image.asset(
-                    'images/faculty.png',
-                    fit: BoxFit.contain,
-                ),
-                iconSize: 100,
-                onPressed: () {},
-                )
+              ),
+              GridView.count(
+                  shrinkWrap: true,
+                  crossAxisCount: 2,
+                  crossAxisSpacing: 10.0,
+                  children: [
+                    Column(
+                      children : [
+                        IconButton(
+                          icon: Image.asset(
+                            'images/faculty.jpeg',
+                          ),
+                          iconSize: 100,
+                          onPressed: () {},
+                        ),
+                        Text('Faculty Info')
+                      ],
+                    ),
+                    Column(
+                      children : [
+                        IconButton(
+                        icon: Image.asset(
+                          'images/Gallery.png',
+                        ),
+                        iconSize: 100,
+                        onPressed: () {},
+                        ),
+                        Text('Gallery')
+                      ],
+                    ),
+                    Column(
+                      children : [
+                        IconButton(
+                          icon: Image.asset(
+                            'images/AboutUs.png',
+                          ),
+                          iconSize: 100,
+                          onPressed: () {},
+                        ),
+                        Text('About Us')
+                      ],
+                    ),
+                    Column(
+                      children : [
+                        IconButton(
+                          icon: Image.asset(
+                            'images/Contact.png',
+                          ),
+                          iconSize: 100,
+                          onPressed: () {},
+                        ),
+                        Text('Contact Us')
+                      ],
+                    ),
+                  ],
 
+                ),
               ],
             )
           ),
