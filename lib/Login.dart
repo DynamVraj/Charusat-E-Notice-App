@@ -55,6 +55,7 @@ class _LoginState extends State<Login> {
     return Scaffold(
       body: Center(
         child: SingleChildScrollView(
+          physics: const NeverScrollableScrollPhysics(),
           primary: false,
           child: Container(
             color: Colors.white,

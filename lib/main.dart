@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Email And Password Login',
+      title: 'Charusat E-Notice App',
       theme: ThemeData(
         primarySwatch: Colors.red,
       ),

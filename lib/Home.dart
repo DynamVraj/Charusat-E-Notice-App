@@ -11,25 +11,38 @@ class _HomeState extends State<Home>{
   TextStyle style = TextStyle(fontFamily: 'Montserrat', fontSize: 20.0);
   @override
   Widget build(BuildContext context) {
-    final facultyField = TextField(
-      obscureText: false,
-      style: style,
-      decoration: InputDecoration(
-          contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-          hintText: "Email",
-          border:
-          OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
-    );
     return Scaffold(
+      appBar: AppBar(
+        title: Text('   Charusat E-Notice App'),
+        backgroundColor: Color(0xff01A0C7),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: Color(0xff01A0C7),
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'Student Zone',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.chat),
+            label: 'Notices',
+          ),
+        ],
+      ),
         body: Center(
         child: SingleChildScrollView(
+          physics: const NeverScrollableScrollPhysics(),
           primary: false,
           child: Container(
           color: Colors.white,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-                SizedBox(height :155.0),
+                SizedBox(height : 55.0),
                 SizedBox(
                   height: 155.0,
                   child: Image.asset(
@@ -101,7 +114,6 @@ class _HomeState extends State<Home>{
             ),
           ),
         ),
-
     );
   }
 
