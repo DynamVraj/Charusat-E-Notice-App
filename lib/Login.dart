@@ -1,6 +1,7 @@
 import 'package:charusat/Home.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'Home(admin).dart';
 
 
 class Login extends StatefulWidget {
@@ -43,7 +44,7 @@ class _LoginState extends State<Login> {
         minWidth: MediaQuery.of(context).size.width,
         padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
         onPressed: () {
-          Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Home()));
+            Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Home()));
         },
         child: Text("Login",
             textAlign: TextAlign.center,
