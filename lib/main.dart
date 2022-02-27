@@ -1,7 +1,7 @@
+
 import 'package:flutter/material.dart';
 
 import 'Splash.dart';
-
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(MyApp());

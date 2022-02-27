@@ -1,3 +1,5 @@
+import 'package:charusat/Notice.dart';
+import 'package:charusat/StudentZone.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -16,33 +18,17 @@ class _HomeState extends State<Home>{
         title: Text('  Charusat E-Notice App'),
         backgroundColor: Color(0xff01A0C7),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        selectedItemColor: Color(0xff01A0C7),
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Student Zone',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.chat),
-            label: 'Notices',
-          ),
-        ],
-      ),
         body: Center(
         child: SingleChildScrollView(
           physics: const NeverScrollableScrollPhysics(),
           primary: false,
-          child: Container(
+          child:
+          Container(
           color: Colors.white,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-                SizedBox(height : 55.0),
+                SizedBox(height : 45.0),
                 SizedBox(
                   height: 155.0,
                   child: Image.asset(
@@ -50,10 +36,10 @@ class _HomeState extends State<Home>{
                     fit: BoxFit.contain,
                   ),
                 ),
-                SizedBox(height: 25),
+                SizedBox(height: 15),
                 GridView.count(
                     primary: false,
-                    padding: EdgeInsets.all(40.0),
+                    padding: EdgeInsets.all(50),
                     shrinkWrap: true,
                     crossAxisCount: 2,
                     children: [
@@ -79,6 +65,34 @@ class _HomeState extends State<Home>{
                           onPressed: () {},
                           ),
                           Text('Gallery')
+                        ],
+                      ),
+                      Column(
+                        children : [
+                          IconButton(
+                            icon: Image.asset(
+                              'images/StudentZone.png',
+                            ),
+                            iconSize: 80,
+                            onPressed: () {
+                              Navigator.of(context).push(MaterialPageRoute(builder: (context)=>StudentZone()));
+                            },
+                          ),
+                          Text('Student Zone')
+                        ],
+                      ),
+                      Column(
+                        children : [
+                          IconButton(
+                            icon: Image.asset(
+                              'images/chat.png',
+                            ),
+                            iconSize: 80,
+                            onPressed: () {
+                              Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Notice()));
+                            },
+                          ),
+                          Text('Notices')
                         ],
                       ),
                       Column(

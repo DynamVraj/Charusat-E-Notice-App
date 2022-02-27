@@ -1,21 +1,21 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class StudentZone extends StatefulWidget {
-  const StudentZone({Key? key}) : super(key: key);
+class Notice extends StatefulWidget {
+  const Notice({Key? key}) : super(key: key);
 
   @override
-  _StudentZoneState createState() => _StudentZoneState();
+  _NoticeState createState() => _NoticeState();
 }
-class _StudentZoneState extends State<StudentZone>{
+class _NoticeState extends State<Notice>{
   TextStyle style = TextStyle(fontFamily: 'Montserrat', fontSize: 20.0);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text('  Charusat E-Notice App'),
-          backgroundColor: Color(0xff01A0C7),
-        ),
+      appBar: AppBar(
+        title: Text('  Charusat E-Notice App'),
+        backgroundColor: Color(0xff01A0C7),
+      ),
       body: Center(
         child: SingleChildScrollView(
           physics: const NeverScrollableScrollPhysics(),
