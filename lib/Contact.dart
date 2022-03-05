@@ -1,19 +1,19 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class Faculty extends StatefulWidget {
-  const Faculty({Key? key}) : super(key: key);
+class Contact extends StatefulWidget {
+  const Contact({Key? key}) : super(key: key);
 
   @override
-  _FacultyState createState() => _FacultyState();
+  _ContactState createState() => _ContactState();
 }
-class _FacultyState extends State<Faculty>{
+class _ContactState extends State<Contact>{
   TextStyle style = TextStyle(fontFamily: 'Montserrat', fontSize: 20.0);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
           appBar: AppBar(
-            title: Text('           Faculty Info'),
+            title: Text('            Contact Us'),
             backgroundColor: Color(0xff01A0C7),
           ),
           body: ListView(children: <Widget>[

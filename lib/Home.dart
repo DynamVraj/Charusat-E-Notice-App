@@ -1,3 +1,4 @@
+import 'package:charusat/Contact.dart';
 import 'package:charusat/Faculty.dart';
 import 'package:charusat/Notice.dart';
 import 'package:charusat/StudentZone.dart';
@@ -48,32 +49,6 @@ class _HomeState extends State<Home>{
                         children : [
                           IconButton(
                             icon: Image.asset(
-                              'images/faculty.jpeg',
-                            ),
-                            iconSize: 80,
-                            onPressed: () {
-                              Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Faculty()));
-                            },
-                          ),
-                          Text('Faculty Info')
-                        ],
-                      ),
-                      Column(
-                        children : [
-                          IconButton(
-                          icon: Image.asset(
-                            'images/Gallery.png',
-                          ),
-                          iconSize: 80,
-                          onPressed: () {},
-                          ),
-                          Text('Gallery')
-                        ],
-                      ),
-                      Column(
-                        children : [
-                          IconButton(
-                            icon: Image.asset(
                               'images/StudentZone.png',
                             ),
                             iconSize: 80,
@@ -102,6 +77,32 @@ class _HomeState extends State<Home>{
                         children : [
                           IconButton(
                             icon: Image.asset(
+                              'images/faculty.jpeg',
+                            ),
+                            iconSize: 80,
+                            onPressed: () {
+                              Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Faculty()));
+                            },
+                          ),
+                          Text('Faculty Info')
+                        ],
+                      ),
+                      Column(
+                        children : [
+                          IconButton(
+                          icon: Image.asset(
+                            'images/Gallery.png',
+                          ),
+                          iconSize: 80,
+                          onPressed: () {},
+                          ),
+                          Text('Gallery')
+                        ],
+                      ),
+                      Column(
+                        children : [
+                          IconButton(
+                            icon: Image.asset(
                               'images/AboutUs.png',
                             ),
                             iconSize: 80,
@@ -117,7 +118,9 @@ class _HomeState extends State<Home>{
                               'images/Contact.png',
                             ),
                             iconSize: 80,
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Contact()));
+                            },
                           ),
                           Text('Contact Us')
                         ],
