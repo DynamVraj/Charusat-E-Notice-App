@@ -1,3 +1,4 @@
+import 'package:charusat/Faculty.dart';
 import 'package:charusat/Notice.dart';
 import 'package:charusat/StudentZone.dart';
 import 'package:flutter/cupertino.dart';
@@ -50,7 +51,9 @@ class _HomeState extends State<Home>{
                               'images/faculty.jpeg',
                             ),
                             iconSize: 80,
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Faculty()));
+                            },
                           ),
                           Text('Faculty Info')
                         ],
