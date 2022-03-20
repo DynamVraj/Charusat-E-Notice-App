@@ -1,5 +1,12 @@
+import 'package:charusat/About.dart';
+import 'package:charusat/Contact.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import 'AddStudent.dart';
+import 'Faculty.dart';
+import 'Notice.dart';
+import 'StudentZone.dart';
 
 class HomeAdmin extends StatefulWidget {
   const HomeAdmin({Key? key}) : super(key: key);
@@ -20,105 +27,125 @@ class _HomeAdminState extends State<HomeAdmin>{
             icon: Icon(
               Icons.person_add_alt_1_rounded ,
             ),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).push(MaterialPageRoute(builder: (context)=>AddStudent()));
+            },
           )
-        ],
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        selectedItemColor: Color(0xff01A0C7),
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Student Zone',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.chat),
-            label: 'Notices',
-          ),
         ],
       ),
       body: Center(
         child: SingleChildScrollView(
           physics: const NeverScrollableScrollPhysics(),
           primary: false,
-          child: Container(
-              color: Colors.white,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[
-                  SizedBox(height : 55.0),
-                  SizedBox(
-                    height: 155.0,
-                    child: Image.asset(
-                      "images/logo.png",
-                      fit: BoxFit.contain,
+          child:
+          Container(
+            color: Colors.white,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                SizedBox(height : 45.0),
+                SizedBox(
+                  height: 155.0,
+                  child: Image.asset(
+                    "images/logo.png",
+                    fit: BoxFit.contain,
+                  ),
+                ),
+                SizedBox(height: 15),
+                GridView.count(
+                  primary: false,
+                  padding: EdgeInsets.all(50),
+                  shrinkWrap: true,
+                  crossAxisCount: 2,
+                  children: [
+                    Column(
+                      children : [
+                        IconButton(
+                          icon: Image.asset(
+                            'images/StudentZone.png',
+                          ),
+                          iconSize: 80,
+                          onPressed: () {
+                            Navigator.of(context).push(MaterialPageRoute(builder: (context)=>StudentZone()));
+                          },
+                        ),
+                        Text('Student Zone')
+                      ],
                     ),
-                  ),
-                  SizedBox(height: 25),
-                  GridView.count(
-                    primary: false,
-                    padding: EdgeInsets.all(40.0),
-                    shrinkWrap: true,
-                    crossAxisCount: 2,
-                    children: [
-                      Column(
-                        children : [
-                          IconButton(
-                            icon: Image.asset(
-                              'images/faculty.jpeg',
-                            ),
-                            iconSize: 80,
-                            onPressed: () {},
+                    Column(
+                      children : [
+                        IconButton(
+                          icon: Image.asset(
+                            'images/chat.png',
                           ),
-                          Text('Faculty Info')
-                        ],
-                      ),
-                      Column(
-                        children : [
-                          IconButton(
-                            icon: Image.asset(
-                              'images/Gallery.png',
-                            ),
-                            iconSize: 80,
-                            onPressed: () {},
+                          iconSize: 80,
+                          onPressed: () {
+                            Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Notice()));
+                          },
+                        ),
+                        Text('Notices')
+                      ],
+                    ),
+                    Column(
+                      children : [
+                        IconButton(
+                          icon: Image.asset(
+                            'images/faculty.jpeg',
                           ),
-                          Text('Gallery')
-                        ],
-                      ),
-                      Column(
-                        children : [
-                          IconButton(
-                            icon: Image.asset(
-                              'images/AboutUs.png',
-                            ),
-                            iconSize: 80,
-                            onPressed: () {},
+                          iconSize: 80,
+                          onPressed: () {
+                            Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Faculty()));
+                          },
+                        ),
+                        Text('Faculty Info')
+                      ],
+                    ),
+                    Column(
+                      children : [
+                        IconButton(
+                          icon: Image.asset(
+                            'images/Gallery.png',
                           ),
-                          Text('About Us')
-                        ],
-                      ),
-                      Column(
-                        children : [
-                          IconButton(
-                            icon: Image.asset(
-                              'images/Contact.png',
-                            ),
-                            iconSize: 80,
-                            onPressed: () {},
+                          iconSize: 80,
+                          onPressed: () {},
+                        ),
+                        Text('Gallery')
+                      ],
+                    ),
+                    Column(
+                      children : [
+                        IconButton(
+                          icon: Image.asset(
+                            'images/AboutUs.png',
                           ),
-                          Text('Contact Us')
-                        ],
-                      ),
-                      SizedBox(height: 0.0,)
-                    ],
-                  ),
-                  SizedBox(height: 0.0),
-                ],
-              )
+                          iconSize: 80,
+                          onPressed: () {
+                            Navigator.of(context).push(MaterialPageRoute(builder: (context)=>About()));
+                            },
+                        ),
+                        Text('About Us')
+                      ],
+                    ),
+                    Column(
+                      children : [
+                        IconButton(
+                          icon: Image.asset(
+                            'images/Contact.png',
+                          ),
+                          iconSize: 80,
+                          onPressed: () {
+                            Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Contact()));
+                          },
+                        ),
+                        Text('Contact Us')
+                      ],
+                    ),
+                    SizedBox(height: 0.0,)
+                  ],
+                ),
+                SizedBox(height: 0.0),
+              ],
+            ),
           ),
         ),
       ),

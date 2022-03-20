@@ -5,6 +5,8 @@ import 'package:charusat/StudentZone.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'About.dart';
+
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
 
@@ -106,7 +108,9 @@ class _HomeState extends State<Home>{
                               'images/AboutUs.png',
                             ),
                             iconSize: 80,
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.of(context).push(MaterialPageRoute(builder: (context)=>About()));
+                            },
                           ),
                           Text('About Us')
                         ],

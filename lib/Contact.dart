@@ -40,24 +40,14 @@ class _ContactState extends State<Contact>{
               ],
               rows: [
                 DataRow(cells: [
-                  DataCell(Text('1')),
-                  DataCell(Text('Stephen')),
-                  DataCell(Text('Actor')),
+                  DataCell(Text('20CS059')),
+                  DataCell(Text('Vraj')),
+                  DataCell(Text('70433 31110')),
                 ]),
                 DataRow(cells: [
-                  DataCell(Text('5')),
-                  DataCell(Text('John')),
-                  DataCell(Text('Student')),
-                ]),
-                DataRow(cells: [
-                  DataCell(Text('10')),
-                  DataCell(Text('Harry')),
-                  DataCell(Text('Leader')),
-                ]),
-                DataRow(cells: [
-                  DataCell(Text('15')),
-                  DataCell(Text('Peter')),
-                  DataCell(Text('Scientist')),
+                  DataCell(Text('20CS072')),
+                  DataCell(Text('Nitant')),
+                  DataCell(Text('98257 00891')),
                 ]),
               ],
             ),
