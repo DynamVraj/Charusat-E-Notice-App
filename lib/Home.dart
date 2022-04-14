@@ -6,6 +6,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'About.dart';
+import 'Gallery.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -96,7 +97,10 @@ class _HomeState extends State<Home>{
                             'images/Gallery.png',
                           ),
                           iconSize: 80,
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Gallery()));
+
+                          },
                           ),
                           Text('Gallery')
                         ],

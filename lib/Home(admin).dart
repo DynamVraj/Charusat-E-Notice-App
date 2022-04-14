@@ -1,10 +1,13 @@
 import 'package:charusat/About.dart';
 import 'package:charusat/Contact.dart';
+import 'package:charusat/AddNotice(admin).dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'AddStudent.dart';
 import 'Faculty.dart';
+import 'Gallery.dart';
+import 'Notice(Admin).dart';
 import 'Notice.dart';
 import 'StudentZone.dart';
 
@@ -22,16 +25,6 @@ class _HomeAdminState extends State<HomeAdmin>{
       appBar: AppBar(
         title: Text('  Charusat E-Notice App'),
         backgroundColor: Color(0xff01A0C7),
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(
-              Icons.person_add_alt_1_rounded ,
-            ),
-            onPressed: () {
-              Navigator.of(context).push(MaterialPageRoute(builder: (context)=>AddStudent()));
-            },
-          )
-        ],
       ),
       body: Center(
         child: SingleChildScrollView(
@@ -80,7 +73,7 @@ class _HomeAdminState extends State<HomeAdmin>{
                           ),
                           iconSize: 80,
                           onPressed: () {
-                            Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Notice()));
+                            Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Notice2()));
                           },
                         ),
                         Text('Notices')
@@ -107,7 +100,9 @@ class _HomeAdminState extends State<HomeAdmin>{
                             'images/Gallery.png',
                           ),
                           iconSize: 80,
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Gallery()));
+                            },
                         ),
                         Text('Gallery')
                       ],
@@ -148,6 +143,13 @@ class _HomeAdminState extends State<HomeAdmin>{
             ),
           ),
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.of(context).push(MaterialPageRoute(builder: (context)=>AddStudent()));
+        },
+        child: Icon(Icons.add),
+        backgroundColor: Color(0xff01A0C7),
       ),
     );
   }

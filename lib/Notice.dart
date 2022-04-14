@@ -1,6 +1,18 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+class ChatMessage{
+  String messageContent;
+  String messageType;
+  ChatMessage({required this.messageContent, required this.messageType});
+}
+
+List<ChatMessage> messages = [
+  ChatMessage(messageContent: "Hello, Students", messageType: "receiver"),
+  ChatMessage(messageContent: "Welcome to our Charusat-CSE-E-Notice Application", messageType: "receiver"),
+  ChatMessage(messageContent: "This is just a sample notices", messageType: "receiver"),
+];
+
 class Notice extends StatefulWidget {
   const Notice({Key? key}) : super(key: key);
 
@@ -16,27 +28,31 @@ class _NoticeState extends State<Notice>{
         title: Text('  Charusat E-Notice App'),
         backgroundColor: Color(0xff01A0C7),
       ),
-      body: Center(
-        child: SingleChildScrollView(
-          physics: const NeverScrollableScrollPhysics(),
-          primary: false,
-          child: Container(
-            color: Colors.white,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
-                SizedBox(height : 55.0),
-                SizedBox(
-                  height: 155.0,
-                  child: Image.asset(
-                    "images/logo.png",
-                    fit: BoxFit.contain,
-                  ),
+      body: Stack(
+    children: <Widget>[
+      ListView.builder(
+      itemCount: messages.length,
+        shrinkWrap: true,
+        padding: EdgeInsets.only(top: 10,bottom: 10),
+        physics: NeverScrollableScrollPhysics(),
+        itemBuilder: (context, index){
+          return Container(
+            padding: EdgeInsets.only(left: 14,right: 14,top: 10,bottom: 10),
+            child: Align(
+              alignment: (messages[index].messageType == "receiver"?Alignment.topLeft:Alignment.topRight),
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: (messages[index].messageType  == "receiver"?Colors.grey.shade200:Colors.blue[200]),
                 ),
-              ],
+                padding: EdgeInsets.all(16),
+                child: Text(messages[index].messageContent, style: TextStyle(fontSize: 15),),
+              ),
             ),
-          ),
-        ),
+          );
+        },
+      ),
+      ],
       ),
     );
   }

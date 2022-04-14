@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "574813266",
+    "project_id": "charusat-e-notice-app",
+    "storage_bucket": "charusat-e-notice-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:574813266:android:a726d2c006fea9a48c9b8b",
+        "android_client_info": {
+          "package_name": "com.example.charusat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "574813266-7u50j1qhfv7a1gitjsdv81aivauu8bnv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYhZFIxxKhQs-BFYLuaG-EXuLHApXekak"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "574813266-7u50j1qhfv7a1gitjsdv81aivauu8bnv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

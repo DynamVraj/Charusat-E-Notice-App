@@ -30,7 +30,7 @@ class _FacultyState extends State<Faculty> {
               columns: [
                 DataColumn(
                     label: Text('ID',
-                        style: TextStyle(
+                         style: TextStyle(
                             fontSize: 18, fontWeight: FontWeight.bold))),
                 DataColumn(
                     label: Text('Name',
@@ -110,6 +110,22 @@ class _FacultyState extends State<Faculty> {
               ],
             ),
           ),
-        ]));
+        ]
+      ),
+    );
   }
 }
+// Card(
+// child: Padding(
+// padding: EdgeInsets.only(
+// top: 36.0, left: 6.0, right: 6.0, bottom: 6.0),
+// child: ExpansionTile(
+// title: Text('Birth of Universe'),
+// children: <Widget>[
+// Text('Big Bang'),
+// Text('Birth of the Sun'),
+// Text('Earth is Born'),
+// ],
+// ),
+// ),
+// )
